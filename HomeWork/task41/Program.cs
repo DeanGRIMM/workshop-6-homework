@@ -8,49 +8,50 @@
 //  сделал через рандом, чтобы просто не вводить числа в ручную, это быстрее, 
 // можно раскомментировать ручной ввод и закомментировать рандом
 
-void FillArray(int [] array)
+void FillArray(int[] array)
 {
     for (int i=0;i<array.Length; i++)
     array[i] = new Random().Next(-10, 11); 
-    // int = = col.Length;
-    // 0 = = 0;
+
+    // int length = col.Length;
+    // int index = 0;
     // while (index<length)
     // {
     //     Console.WriteLine("Введите целое число");
-    //     int = = Convert.ToInt32(Console.ReadLine()); 
-    //     col[index] = num; 
-    //     ++++;
+    //     int num = Convert.ToInt32(Console.ReadLine());        
+    //     col[index] = num;        
+    //     index++;
     // }
+
 }
-void PrintArray(int [] array)
+void PrintArray(int[] array)
 {
     for (int i=0;i<array.Length; i++)
         Console.Write($"{array[i]} ");
     Console.WriteLine();
-    // int = = col1.Length;
-    // 0  = = 0;
+    
+    // int count = col1.Length;
+    // int position = 0;
     // while (position<count)
     // {
     //     Console.Write(col1[position]);
-    //     Console.Write (" ");
-    //     ++++;
+    //     Console.Write(" ");
+    //     position++;
     // }
-}
-void Diff (int [] array)
-{
-    for (int i=1;i<array.Length; i++)
-    {
-        if (array[i]>max) max = array[i];
-        if (array[i]<min) min = array[i];
-    }  
-    Diff = max - min;
 
-    Console.WriteLine($"максимальный элемент массива {max}");
-    Console.WriteLine($"минимальный элемент массива {min}");
-    Console.WriteLine($"разница между максимальным и минимальным элементами массива {Diff}");
+}
+void Greater (int[] array)
+{
+    int greater = 0;
+    for (int i=0;i<array.Length; i++)
+    {
+        if (array[i]>0) greater+=1;
+    }  
+    Console.WriteLine($"чисел больше нуля {greater}");
 }
 Console.WriteLine("Введите размер массива");
 int N = Convert.ToInt32(Console.ReadLine());
-double [] array = new double[N];
+int[] array = new int[N];
 FillArray(array);
 PrintArray(array);
+Greater(array);
