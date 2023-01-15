@@ -5,22 +5,21 @@
 // 1, -7, 567, 89, 223-> 3
 
 // можно либо вводить числа с клавиатуры, либо ввод рандом
-//  сделал через рандом, чтобы просто не вводить числа в ручную, это быстрее, 
+// сделал через рандом, чтобы просто не вводить числа в ручную, это быстрее, 
 // можно раскомментировать ручной ввод и закомментировать рандом
+// есть оба варианта
 
 void FillArray(int[] array)
 {
     for (int i=0;i<array.Length; i++)
     array[i] = new Random().Next(-10, 11); 
 
-    // int length = col.Length;
-    // int index = 0;
-    // while (index<length)
+    // int length = array.Length;
+    // for (int i=0;i<array.Length; i++)
     // {
     //     Console.WriteLine("Введите целое число");
     //     int num = Convert.ToInt32(Console.ReadLine());        
-    //     col[index] = num;        
-    //     index++;
+    //     array[i] = num;
     // }
 
 }
@@ -30,11 +29,11 @@ void PrintArray(int[] array)
         Console.Write($"{array[i]} ");
     Console.WriteLine();
     
-    // int count = col1.Length;
+    // int count = array.Length;
     // int position = 0;
     // while (position<count)
     // {
-    //     Console.Write(col1[position]);
+    //     Console.Write(array[position]);
     //     Console.Write(" ");
     //     position++;
     // }
